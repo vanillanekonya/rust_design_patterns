@@ -62,7 +62,8 @@ fn main() {
         std::io::stdin().read_line(&mut input_text)
             .expect("Failed to read line");
 
-        println!("input text equal");
+        input_text = input_text.trim().to_string();
+        println!("input text equal {}", input_text=="Windows");
 
         let dialog: &dyn Dialog;
         if input_text == "Windows" {
